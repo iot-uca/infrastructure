@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:	
+  cosmos: 
+    image: fortizpenaloza/cosmos:latest
+		port:
+			- "8090:8090" 
+	  volumes:
+			- ./logs:/opt/cosmos/logs
+		
+	telescope:
+		image: jnahas/cosmos-ui:latest
+    port: 
+			- "80:80"
